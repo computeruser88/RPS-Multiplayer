@@ -5,7 +5,7 @@ body {
     overflow: hidden;
 }
 h2 {
-    font-size: 32px;
+    font-size: 42px;
 }
 h3 {
     font-size: 24px;
@@ -21,4 +21,15 @@ h3 {
 }
 .col-md-4 {
     text-align: center;
+}
+@media all and (max-width: 920px){
+    body {
+        margin: 0;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+    .jumbotron {
+        height: 220px;
+    }
+
 }

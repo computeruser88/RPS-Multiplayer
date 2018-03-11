@@ -9,6 +9,19 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyB_Z3QP7CH95uVe5HnFRP49wR6PzzQuGAo",
+            authDomain: "rps-multiplayer-1d8cf.firebaseapp.com",
+            databaseURL: "https://rps-multiplayer-1d8cf.firebaseio.com",
+            projectId: "rps-multiplayer-1d8cf",
+            storageBucket: "",
+            messagingSenderId: "563863947172"
+        };
+
+        firebase.initializeApp(config);
+    </script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css"></link>
@@ -17,12 +30,11 @@
 <body>
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1 class="display-5">Rock Paper Scissors</h1>
+            <h1 class="display-4">Rock Paper Scissors</h1>
             <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Name" aria-label="Name" aria-describedby="basic-addon2">
-                <div class="input-group-append">
-                    <button id="start-button" class="btn btn-outline-secondary" type="button">Start</button>
-                </div>
+                <input type="text" class="form-control" id="player-name" placeholder="Type your name, then click start" aria-label="Name"
+                    aria-describedby="basic-addon2">
+                <button id="start-button" class="btn btn-outline-secondary" type="button">Start</button>
             </div>
         </div>
     </div>
@@ -30,20 +42,39 @@
         <div class="col-md-4">
             <!-- Player 1 section -->
             <h3 id="player-1-name">Waiting for player 1</h3>
-           
-            <h3 id="player-1-choice">Rock<br>Paper<br>Scissors<br></h3>
-            <p>Wins: <span id="wins">0</span> Losses: <span id="losses">0</span></p>
+
+            <h3 id="player-1-choice">
+                <span id="player-1-rock">Rock</span>
+                <br>
+                <span id="player-1-paper">Paper</span>
+                <br>
+                <span id="player-1-scissors">Scissors</span>
+                <br>
+            </h3>
+            <p>Wins:
+                <span id="player-1-wins">0</span> Losses:
+                <span id="player-1-losses">0</span>
+            </p>
         </div>
         <div class="col-md-4">
             <!-- Winner section -->
-            <br><br><h2>Player 1 wins!</h2>
+            <h2 id="winner-section">Player 1 wins!</h2>
         </div>
         <div class="col-md-4">
             <!-- Player 2 section -->
             <h3 id="player-2-name">Waiting for player 2</h3>
-            <h3 id="player-1-choice">Rock<br>Paper<br>Scissors<br></h3>
-            Wins: <span id="wins">0</span>
-            Losses: <span id="losses">0</span>
+            <h3 id="player-2-choice">
+                <span id="player-2-rock">Rock</span>
+                <br>
+                <span id="player-2-paper">Paper</span>
+                <br>
+                <span id="player-2-scissors">Scissors</span>
+                <br>
+            </h3>
+            Wins:
+            <span id="player-2-wins">0</span>
+            Losses:
+            <span id="player-2-losses">0</span>
         </div>
     </div>
     <div class="row">
@@ -51,19 +82,20 @@
         <div class="col-md-6">
             <form id="chat-section">
                 <div class="form-group" align="center">
-                    <label for="exampleFormControlTextarea1">Chatroom</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" readonly></textarea>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" readonly></textarea>
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" id="chat-input" placeholder="Type message here">
+                    <input type="text" class="form-control" id="chat-input" placeholder="Trash-talk your opponent here">
                 </div>
             </form>
         </div>
     </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+    <script src="./assets/javascript/app.js"></script>
 </body>
 
 </html>
