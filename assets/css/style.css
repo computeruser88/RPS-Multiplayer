@@ -5,7 +5,7 @@ body {
     overflow: hidden;
 }
 h2 {
-    font-size: 42px;
+    font-size: 36px;
 }
 h3 {
     font-size: 24px;
@@ -14,6 +14,10 @@ h3 {
     height: 190px;
     background-image: url("../images/marble-3.jpg");
     color: #ffffff;
+}
+.choice {
+    height: 100px;
+    width: 100px;
 }
 #start-button {
     color: #000000;

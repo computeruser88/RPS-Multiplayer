@@ -41,15 +41,18 @@
     <div class="row">
         <div class="col-md-4">
             <!-- Player 1 section -->
-            <h3 id="player-1-name">Waiting for player 1</h3>
+            <h3 id="player-1-name">Player 1</h3>
 
             <h3 id="player-1-choice">
-                <span id="player-1-rock">Rock</span>
-                <br>
-                <span id="player-1-paper">Paper</span>
-                <br>
-                <span id="player-1-scissors">Scissors</span>
-                <br>
+                <span id="player-1-rock">
+                    <img src="./assets/images/rps-rock.png" class="choice" alt="rock">
+                </span>
+                <span id="player-1-paper">
+                    <img src="./assets/images/rps-paper.png" class="choice" alt="paper">
+                </span>
+                <span id="player-1-scissors">
+                    <img src="./assets/images/rps-scissors.png" class="choice" alt="scissors">
+                </span>
             </h3>
             <p>Wins:
                 <span id="player-1-wins">0</span> Losses:
@@ -58,18 +61,22 @@
         </div>
         <div class="col-md-4">
             <!-- Winner section -->
+            <h3 id="hello-message-section"></h3>
             <h2 id="winner-section">Player 1 wins!</h2>
         </div>
         <div class="col-md-4">
             <!-- Player 2 section -->
-            <h3 id="player-2-name">Waiting for player 2</h3>
+            <h3 id="player-2-name">Player 2</h3>
             <h3 id="player-2-choice">
-                <span id="player-2-rock">Rock</span>
-                <br>
-                <span id="player-2-paper">Paper</span>
-                <br>
-                <span id="player-2-scissors">Scissors</span>
-                <br>
+                <span id="player-2-rock">
+                    <img src="./assets/images/rps-rock.png" class="choice" alt="rock">
+                </span>
+                <span id="player-2-paper">
+                    <img src="./assets/images/rps-paper.png" class="choice" alt="paper">
+                </span>
+                <span id="player-2-scissors">
+                    <img src="./assets/images/rps-scissors.png" class="choice" alt="scissors">
+                </span>
             </h3>
             Wins:
             <span id="player-2-wins">0</span>
@@ -84,8 +91,7 @@
                 <div class="form-group">
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" readonly></textarea>
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" id="chat-message" placeholder="Trash-talk your opponent here" aria-label="Name"
-                            aria-describedby="basic-addon2">
+                        <input type="text" class="form-control" id="chat-message" placeholder="Trash-talk your opponent here" aria-label="Name" aria-describedby="basic-addon2">
                         <button id="send-button" class="btn btn-outline-secondary" type="button">Send</button>
                     </div>
                 </div>
