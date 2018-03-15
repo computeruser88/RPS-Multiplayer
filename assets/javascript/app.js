@@ -12,19 +12,11 @@ firebase.initializeApp(config);
 
 var database = firebase.database();
 
-firebase.auth().signInAnonymously().catch(function (error) {
-    // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    console.log(errorCode + " " + errorMessage);
-    // ...
-});
 
 var playersRef = database.ref().child("/players/");
 var chatRef = database.ref().child("/chatroom/");
 var yourName;
 var move;
-var user = firebase.auth().currentUser;
 
 var player = [{
     name: "",
