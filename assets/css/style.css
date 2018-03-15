@@ -19,6 +19,9 @@ h3 {
     height: 100px;
     width: 100px;
 }
+.selected {
+    border: 2px solid #000000;
+}
 #start-button {
     color: #000000;
     background-color: #ffffff;
